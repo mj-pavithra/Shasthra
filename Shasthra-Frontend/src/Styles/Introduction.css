@@ -1,0 +1,29 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.introduction {
+
+    height: 200px;
+    /* background-image: url('/productive2.jpg'); */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 50px; 
+
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+}
+
+.introduction:hover {
+    transform: scale(1.02); 
+    transition: transform 0.3s ease; 
+}
+
+.introduction-text{
+    color: #333; 
+    text-shadow: 2px 2px 0px rgb(189, 186, 183, 0.5);
+    text-align: center; 
+    font-size: 1.5em; 
+    font-family: Arial, sans-serif; 
+}

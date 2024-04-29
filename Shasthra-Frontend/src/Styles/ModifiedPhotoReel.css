@@ -1,0 +1,115 @@
+/* Main container for the photo reel */
+.photo-reel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%; /* Full width */
+    height: 80vh; /* Adjust as needed */
+    margin: 20px auto; /* Center the component */
+    overflow: hidden; /* Hide overflowing content */
+}
+
+/* Photo container layout */
+.photo-container {
+    display: flex;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+}
+
+/* Individual photo containers */
+
+.current-photo-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: transform 0.5s ease-in-out; /* Smooth transition */
+
+}
+.prev-photo-container,
+.next-photo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow:hidden;
+    transition: transform 0.9s ease-in-out; /* Smooth transition */
+}
+
+/* Widths for each slot */
+.prev-photo-container {
+    width: 20%; /* 1/5 of the width */
+}
+.current-photo-container {
+    width: 60%; /* 3/5 of the width */
+}
+.next-photo-container {
+    width: 20%; /* 1/5 of the width */
+}
+
+/* Styling for photos */
+
+.current-photo{
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Adjust as needed */
+    transition: 1000ms;
+
+}
+
+.prev-photo,
+.next-photo {
+    width: 300%;
+    height: auto;
+    filter: blur(5px);
+}
+.prev-photo{
+    position: relative;
+    right: 20vw;
+}
+
+.next-photo{
+    position: relative;
+    left: 20vw;
+}
+
+
+
+/* Add gradient transparency to previous and next photos */
+.prev-photo-container {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.6), transparent);
+}
+.next-photo-container {
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.6), transparent);
+}
+
+/* Navigation buttons */
+.reel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 10px;
+    font-size: 18px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10; /* Ensure buttons are on top */
+    transition: background-color 0.3s;
+}
+
+/* Style for left navigation button */
+.left-button {
+    left: 10px; /* Adjust as needed */
+}
+
+/* Style for right navigation button */
+.right-button {
+    right: 10px; /* Adjust as needed */
+}
+
+/* Hover effect for navigation buttons */
+.reel-button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}

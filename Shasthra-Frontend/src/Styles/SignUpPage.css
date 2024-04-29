@@ -1,0 +1,147 @@
+/* Base styles */
+.sign-up-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.sign-up-form {
+    max-width: 600px;
+    min-width: 400px;
+    height: 450px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.clasic-border{
+    border: #333 solid 1px;
+
+}
+.Sign-In-Title {
+    color: #333;
+}
+
+.sign-up-form form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.notice{
+    max-width: 550px;
+    min-width: 350px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+
+}
+
+.input-label {
+    position: relative;
+    opacity: 0;
+    margin-bottom: 10px;
+    color: #333;
+    margin-right: 5px;
+    transition: 0.5S;
+    background-color: #fff;
+    top:15px;
+    left: 15px;
+    padding: 0 10px;
+
+}
+.active{
+    opacity: 1;
+    transition: 0.5S;
+}
+
+.error-message{
+    position: relative;
+    top:-10px;
+    color: red;
+    font-size: 14px;
+    text-align: left;
+    transition: 0.5S;
+}
+.required-error{
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+    text-align: left;
+    margin-bottom: 10px;
+}
+.signup-input{
+    width: 95%;
+    min-width: 250px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #fff;
+}
+.signup-input.filled{
+    background-color: #fff;
+}
+.signup-input:focus{
+    border: 1px solid #5695d8;
+    outline: none;
+}
+
+.sign-up-form-button {
+    width: 150px;
+
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #5695d8;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+}
+
+.google-signup {
+    max-width: 200px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #84a4c7;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+}
+
+.sign-up-form button:hover {
+    background-color: #0056b3;
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 900px) {
+    .sign-up-form {
+        padding: 20px;
+    }
+
+    .Sign-In-Title {
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .sign-up-form {
+        padding: 20px;
+    }
+    .signup-input {
+        width: 90%;
+    }
+    .Sign-In-Title {
+        font-size: 20px;
+    }
+    
+}

@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+
+
+
+.navbar {
+    position: fixed;
+    top: 0; /* Ensures the navbar stays at the top of the page */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 96px; /* Set consistent height */
+    width: calc(100% - 5px); /* Calculate width with desired adjustment */
+    padding: 0 5px; /* Add padding to account for the width adjustment */
+    background-color: white; /* Add a background color as desired */
+    z-index: 100; /* Ensure navbar is on top of other elements */
+    font-family: 'Poppins', sans-serif; /* Ensure font is correctly set */
+}
+
+.nav-part{
+    padding: 10px;
+}
+/* Smooth transition for the navbar */
+.NavBar {
+    transition: transform 0.3s ease-in-out;
+}
+
+  /* Hide navbar by moving it up */
+.hide-nav {
+    transform: translateY(-100%);
+}
+
+/* CSS rules for NavBar visibility */
+.visible {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    transition: top 0.3s ease-in-out;
+  }
+  
+  .hidden {
+    position: fixed;
+    top: -100px; /* Adjust this value as needed to hide the NavBar */
+    width: 100%;
+    transition: top 0.3s ease-in-out;
+  }
+  

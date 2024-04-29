@@ -1,0 +1,76 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+
+/* Light Theme */
+:root {
+    --primary-color: #6200ea; /* Purple */
+    --primary-color-light: #bb86fc; /* Light purple */
+    --primary-color-dark: #3700b3; /* Dark purple */
+    --background-color: #ffffff; /* White */
+    --text-color: #000000; /* Black */
+  }
+  
+  /* Dark Theme */
+  [data-theme='dark'] {
+    --primary-color: #bb86fc; /* Light purple */
+    --primary-color-light: #6200ea; /* Purple */
+    --primary-color-dark: #03dac6; /* Teal */
+    --background-color: #121212; /* Dark background */
+    --text-color: #ffffff; /* White */
+  }
+  
+
+.right-nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 8vh;
+    font-family: 'Poppins', sans-serif;
+    width: 230px;
+}
+.nav-button{
+    padding: 10px;
+    margin: 10px;
+    font-size: 20px;
+}
+
+.nav-button:hover{
+    border: #282c34;
+    border-style: solid;
+    cursor: pointer;
+    border-radius: 20px;
+    background-color: #454950;
+    transition: 0.2s;
+    color: white;
+    border-radius: 20px;
+}
+
+@media (max-width: 1030px) {
+    .right-nav{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        min-height: 4vh;
+        font-family: 'Poppins', sans-serif;
+        width: 130px;
+    }
+    .nav-button{
+        font-size: 20px;
+        border-radius: 20px;
+        height:25px ;
+    }
+    .nav-button:hover{
+        height: 25px;
+    }
+    .sign-in{
+        margin: 5px 10px 0px 10px;
+    }
+    .sign-up{
+        margin: 0px 10px 5px 10px;
+    }
+  }

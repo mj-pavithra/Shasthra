@@ -1,0 +1,29 @@
+/* Global styles */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* HomePage container */
+.HomePage {
+  display: flex;
+  flex-direction: column;
+  width: calc(100vw - 20px);
+}
+
+/* NavBar styling for visibility */
+.navbar-visible {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  transition: transform 0.3s ease-in-out;
+  transform: translateY(0); /* NavBar is visible */
+}
+
+.navbar-hidden {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  transition: transform 0.3s ease-in-out;
+  transform: translateY(-100%); /* NavBar is hidden */
+}

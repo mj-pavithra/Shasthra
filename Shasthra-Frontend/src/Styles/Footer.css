@@ -1,0 +1,162 @@
+
+:root {
+  --primary: #3f51b5; /* Primary color */
+  --light: #ffffff; /* Light color */
+  --dark: #212121; /* Dark color */
+  --accent: #ff9800; /* Accent color */
+}
+.footer-container {
+  width: 100%;
+  background-color: var(--dark);
+  color: var(--light);
+  padding: 50px 0px;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.footer-section {
+  display: grid;
+  gap: 20px;
+}
+.footer-company{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+
+}
+.footer-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+
+}
+
+.fotter-link-list{
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  align-items: self-start;
+  margin: 5px;
+}
+
+.footer-link,
+.footer-info,
+.footer-day,
+.footer-time,
+.footer-newsletter-text,
+.footer-input {
+  color: var(--light);
+  padding: 4px;
+}
+
+.footer-link:hover {
+  color: var(--primary);
+}
+.fotter-availability{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+.footer-social {
+  display: flex;
+  gap: 5px;
+  width: 300px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 20px 0 ;
+}
+
+.footer-social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  background-color: var(--light);
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.footer-social-link:hover {
+  background-color: var(--primary);
+}
+
+.footer-legal {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.footer-newsletter{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+.footer-newsletter-form {
+  display: flex;
+  flex-direction: row;
+  padding:5px;
+  gap: 10px;
+  margin-left: 40px;
+}
+
+
+.footer-input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid var(--light);
+  border-radius: 5px;
+}
+
+.footer-button {
+  background-color: var(--primary);
+  color: var(--light);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.footer-button:hover {
+  background-color: darken(var(--primary), 10%);
+}
+
+
+.footer-3rd {
+  font-size: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.footer-site-link {
+  color: var(--light);
+}
+
+.footer-menu {
+  margin: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 15px;
+}
+
+.footer-menu-link {
+  color: var(--light);
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+  }
+
+}

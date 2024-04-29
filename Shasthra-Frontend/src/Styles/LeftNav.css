@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+
+.left-nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.logo{
+    height: 5vh;
+    margin: 10px;
+    font-size: 1.5rem;
+    color: #0a0c66;
+}
+
+.site-title{
+    font-size: 2rem;
+    margin: 1rem;
+    color: #0a0c66;
+    text-align: center;
+}
+
+@media screen and (max-width: 985px) {
+    .site-title {
+        font-size: 1.8em;
+    }
+    
+}
+
