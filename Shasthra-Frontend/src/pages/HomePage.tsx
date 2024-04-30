@@ -4,7 +4,7 @@ import HPmiddle from "../Containers/HPmiddle";
 import Footer from "../Components/Footer";
 import '../Styles/HomePage.css';
 
-const navSegments: string[] = ["Home1", "About", "Contact", "Services", "Portfolio"];
+const navSegments: string[] = ["Home", "About", "Contact", "Services", "Portfolio"];
 console.log("HomePage loaded.");
 const HomePage: React.FC = () => {
     // State to track the visibility of the NavBar
@@ -33,7 +33,6 @@ const HomePage: React.FC = () => {
 
     // Add scroll event listener
     useEffect(() => {
-        console.log("Adding scroll event listener.");
         window.addEventListener("scroll", handleScroll);
 
         // Cleanup the event listener

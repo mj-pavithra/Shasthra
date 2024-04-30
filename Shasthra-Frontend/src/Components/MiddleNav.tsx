@@ -1,54 +1,78 @@
-
-import React, { useState , useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import "../Styles/MiddleNav.css";
 
-function MiddleNav({ segments }) {
-    const [showDropdown, setShowDropdown] = useState(false);
-    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+interface MiddleNavProps {
+    segments: string[];
+}
 
+const MiddleNav: React.FC<MiddleNavProps> = ({ segments }) => {
+    const [showDropdown, setShowDropdown] = useState<boolean>(false);
+    const [windowWidth, setWindowWidth] = useState<number>(window.innerWidth);
+
+    // Handle window resize
     useEffect(() => {
-      const handleResize = () => {
-        setWindowWidth(window.innerWidth);
-      };
-  
-      window.addEventListener('resize', handleResize);
-  
-      return () => {
-        window.removeEventListener('resize', handleResize);
-      };
+        const handleResize = () => {
+            setWindowWidth(window.innerWidth);
+        };
+
+        window.addEventListener("resize", handleResize);
+
+        return () => {
+            window.removeEventListener("resize", handleResize);
+        };
     }, []);
 
+    // Toggle the dropdown menu
     const toggleDropdown = () => {
-        setShowDropdown(!showDropdown);
+        setShowDropdown((prevState) => !prevState);
     };
 
-    function LoadSignIn(){
-        window.location.href = '/signin';
-    }
-    function LoadSignUp(){
-        window.location.href = '/signup';
-    }
+    // Navigation functions
+    const loadSignIn = () => {
+        window.location.href = "/signin";
+    };
+
+    const loadSignUp = () => {
+        window.location.href = "/signup";
+    };
 
     return (
         <div className="middle-nav">
+            {/* Large navigation */}
             <div className="middle-nav-max">
                 {segments.map((segment, index) => (
-                    <h1 key={index} className="nav-segments">{segment}</h1>
+                    <h1 key={index} className="nav-segments">
+                        {segment}
+                    </h1>
                 ))}
             </div>
+
+            {/* Mobile navigation */}
             <div className={`middle-nav-min ${showDropdown ? "show-dropdown" : ""}`}>
-                <button className="dropdown-button" onClick={toggleDropdown}>Menu</button>
+                <button className="dropdown-button" onClick={toggleDropdown}>
+                    Menu
+                </button>
                 <div className={`dropdown-content ${showDropdown ? "show" : ""}`}>
                     {segments.map((segment, index) => (
-                        <h1 key={index} className="nav-segments-min">{segment}</h1>
+                        <h1 key={index} className="nav-segments-min">
+                            {segment}
+                        </h1>
                     ))}
-                    {windowWidth < 968 ? <h1 className="nav-segments-min nav-button "  onClick={LoadSignIn}>Sign In</h1> : null}
-                    {windowWidth < 968 ? <h1 className="nav-segments-min nav-button " onClick={LoadSignUp}>Sign Up</h1> : null}
 
+                    {windowWidth < 968 && (
+                        <>
+                            <h1 className="nav-segments-min nav-button" onClick={loadSignIn}>
+                                Sign In
+                            </h1>
+                            <h1 className="nav-segments-min nav-button" onClick={loadSignUp}>
+                                Sign Up
+                            </h1>
+                        </>
+                    )}
                 </div>
             </div>
         </div>
     );
-}
+};
 
 export default MiddleNav;

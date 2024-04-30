@@ -5,7 +5,7 @@
     justify-content: center;
     position: relative;
     width: 100%; /* Full width */
-    height: 80vh; /* Adjust as needed */
+    max-height: 85vh; /* Adjust as needed */
     margin: 20px auto; /* Center the component */
     overflow: hidden; /* Hide overflowing content */
 }
@@ -38,13 +38,13 @@
 
 /* Widths for each slot */
 .prev-photo-container {
-    width: 20%; /* 1/5 of the width */
+    width: 10%; /* 1/5 of the width */
 }
 .current-photo-container {
-    width: 60%; /* 3/5 of the width */
+    width: 80%; /* 3/5 of the width */
 }
 .next-photo-container {
-    width: 20%; /* 1/5 of the width */
+    width: 10%; /* 1/5 of the width */
 }
 
 /* Styling for photos */
@@ -59,18 +59,18 @@
 
 .prev-photo,
 .next-photo {
-    width: 300%;
+    width: 800%;
     height: auto;
     filter: blur(5px);
 }
 .prev-photo{
     position: relative;
-    right: 20vw;
+    right: 28vw;
 }
 
 .next-photo{
     position: relative;
-    left: 20vw;
+    left: 28vw;
 }
 
 
