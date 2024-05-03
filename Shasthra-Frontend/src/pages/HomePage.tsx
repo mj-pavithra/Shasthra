@@ -48,7 +48,10 @@ const HomePage: React.FC = () => {
     return (
         <div className="HomePage">
             {/* Pass class based on NavBar visibility */}
-            <NavBar segmentsList={navSegments} className={showNavBar ? "navbar-visible" : "navbar-hidden"} />
+            <NavBar
+                className={showNavBar ? "navbar-visible" : "navbar-hidden"}
+                segmentsList={navSegments}
+            />
             <HPmiddle />
             <Footer />
         </div>

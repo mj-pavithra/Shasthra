@@ -1,7 +1,7 @@
 import React from "react";
 import '../Styles/AboutUs.css';
 
-function AboutUs() {
+const AboutUs:React.FC = () =>{
     return (
         <div className="aboutUs">
             <h1 className="greeting">
