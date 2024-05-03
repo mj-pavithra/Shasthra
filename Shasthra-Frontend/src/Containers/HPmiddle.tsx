@@ -4,6 +4,7 @@ import AboutUs from "../Components/AboutUs";
 import Introduction from "../Components/Introduction";
 import PhotoReel from "../Components/PhotoReel";
 import ModifiedPhotoReel from "../Components/ModifiedPhotoReel";
+import YouTubeVideoGrid from "../Components/YouTubeVideoGrid";
 
 function HPmiddle() {
 
@@ -21,6 +22,10 @@ function HPmiddle() {
         <div>
             <AboutUs/>
             <ModifiedPhotoReel photos={photos} />
+            <YouTubeVideoGrid
+                channelId="UCPcLRv5W5E2DuYISjur-mOg"
+                apiKey="AIzaSyBjc5_ztmiXI3mOaizTceIqUOfWLZUMbRk"
+            />
             <Introduction/>
         </div>
     );

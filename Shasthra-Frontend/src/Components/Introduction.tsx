@@ -4,7 +4,8 @@ import '../Styles/Introduction.css';
 function Introduction() {
     return (
         <div className="introduction">
-            <h1 className="introduction-text">Kalakanni wage inne nathuwa wada karapalla</h1>
+            <h1 className="introduction-text">Welcome To Shasthra</h1>
+            
         </div>
     );
 }
