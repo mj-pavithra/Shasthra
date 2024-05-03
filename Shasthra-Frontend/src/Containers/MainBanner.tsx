@@ -2,10 +2,9 @@ import React from "react";
 import '../Styles/MainBanner.css';
 
 
-const MainBanner = () => {
+const MainBanner: React.FC = () => {
   return (
     <div className="MainBanner">
-      <img src="" alt="" />
     </div>
   );
 };

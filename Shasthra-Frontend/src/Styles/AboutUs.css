@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+
     
 }
 
@@ -16,8 +17,8 @@
 .greeting{
     padding: 5px;
     font-size: 4em;
-    font-family: Arial, Helvetica, sans-serif;
-
+    font-family:Isiwara;
+    font-family: 'Abhaya Libre', sans-serif ;
 }
 
 .slogan{

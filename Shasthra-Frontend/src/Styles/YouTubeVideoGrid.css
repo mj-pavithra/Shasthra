@@ -1,0 +1,47 @@
+/* Container for the YouTube video grid */
+.youtube-video-grid {
+    padding: 20px;
+}
+
+/* Grid container */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    overflow-x: auto; /* Enable horizontal scrolling */
+}
+
+/* Grid item (video thumbnail) */
+.grid-item {
+    cursor: pointer;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.thumbnail {
+    width: 100%; /* Ensure thumbnails are responsive */
+    height: auto; /* Preserve aspect ratio */
+}
+
+/* Title of the video */
+.title {
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+/* Subscribe button */
+.subscribe-button {
+    grid-column: span 3; /* Span the subscribe button across the grid */
+    text-align: center;
+    padding: 20px 0;
+}
+
+.subscribe-button a {
+    padding: 10px 20px;
+    background-color: red;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}

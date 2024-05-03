@@ -4,8 +4,12 @@ import HPmiddle from "../Containers/HPmiddle";
 import Footer from "../Components/Footer";
 import '../Styles/HomePage.css';
 
+// List of navigation segments
 const navSegments: string[] = ["Home", "About", "Contact", "Services", "Portfolio"];
+
 console.log("HomePage loaded.");
+
+// HomePage component
 const HomePage: React.FC = () => {
     // State to track the visibility of the NavBar
     const [showNavBar, setShowNavBar] = useState<boolean>(true);
@@ -29,7 +33,6 @@ const HomePage: React.FC = () => {
             console.log("NavBar visibility changed to:", shouldShowNavBar);
         }
     };
-    console.log("NavBar visibility:");
 
     // Add scroll event listener
     useEffect(() => {
