@@ -1,7 +1,7 @@
 import React from "react";
 
 
-const TestComponent = () => {
+const TestComponent:React.FC = () => {
   return (
     <div>
       <h1>Test Component</h1>

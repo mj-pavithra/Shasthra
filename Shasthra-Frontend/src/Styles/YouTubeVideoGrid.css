@@ -1,14 +1,29 @@
 /* Container for the YouTube video grid */
 .youtube-video-grid {
-    padding: 20px;
+    padding: 30px 50px;
 }
 
 /* Grid container */
 .grid-container {
+    overflow-x: auto; /* Enable horizontal scrolling */
+}
+
+/* Row for each playlist */
+.playlist-row {
+    margin-bottom: 30px;
+}
+
+.playlist-title {
+    font-size: 32px;
+    margin-bottom: 20px;
+    margin-left: calc(50vw - 150px);
+}
+
+/* Display videos within a playlist in a grid */
+.playlist-videos {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 10px;
-    overflow-x: auto; /* Enable horizontal scrolling */
+    grid-gap: 30px;
 }
 
 /* Grid item (video thumbnail) */
@@ -20,20 +35,26 @@
     align-items: center;
 }
 
+.grid-item:hover {
+    background-color: #f9f9f9;
+
+}
+
 .thumbnail {
-    width: 100%; /* Ensure thumbnails are responsive */
+    min-width: 200px;
+    width: 80%; /* Ensure thumbnails are responsive */
     height: auto; /* Preserve aspect ratio */
+    border-radius: 5px;
 }
 
 /* Title of the video */
 .title {
     margin-top: 5px;
-    font-size: 14px;
+    font-size: 24px;
 }
 
 /* Subscribe button */
 .subscribe-button {
-    grid-column: span 3; /* Span the subscribe button across the grid */
     text-align: center;
     padding: 20px 0;
 }
@@ -44,4 +65,21 @@
     color: white;
     text-decoration: none;
     border-radius: 5px;
+}
+
+/* Responsive design for smaller screens */
+@media screen and (max-width: 768px) {
+    .grid-item {
+        width: 100%;
+    }
+
+    .playlist-title {
+        margin-left: 0;
+    }
+
+    .title {
+        font-size: 15px;
+    }
+
+
 }

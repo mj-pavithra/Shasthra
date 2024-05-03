@@ -1,7 +1,7 @@
 import React from "react";
 import '../Styles/LeftNav.css';
 
-function LeftNav() {
+const LeftNav:React.FC = () =>{
     return (
         <div className="left-nav">
         <img src="../favicon2.ico" alt="logo" className="logo" />

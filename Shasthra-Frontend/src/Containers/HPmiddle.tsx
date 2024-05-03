@@ -2,11 +2,10 @@ import React from "react";
 import '../Styles/HPmiddle.css';
 import AboutUs from "../Components/AboutUs";
 import Introduction from "../Components/Introduction";
-import PhotoReel from "../Components/PhotoReel";
 import ModifiedPhotoReel from "../Components/ModifiedPhotoReel";
 import YouTubeVideoGrid from "../Components/YouTubeVideoGrid";
 
-function HPmiddle() {
+const HPmiddle: React.FC = () => {
 
     const photos = [
         "/youtube-Thumbnail 7.jpg",

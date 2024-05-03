@@ -26,10 +26,10 @@ interface SocialLink {
     link: string;
 }
 
-interface OpeningHours {
-    day: string;
-    time: string;
-}
+// interface OpeningHours {
+//     day: string;
+//     time: string;
+// }
 
 const Footer: React.FC = () => {
     // Define data for company links
@@ -57,10 +57,10 @@ const Footer: React.FC = () => {
     ];
 
     // Define data for opening hours
-    const openingHours: OpeningHours[] = [
-        { day: 'Monday - Saturday', time: '09AM - 09PM' },
-        { day: 'Sunday', time: '10AM - 08PM' },
-    ];
+    // const openingHours: OpeningHours[] = [
+    //     { day: 'Monday - Saturday', time: '09AM - 09PM' },
+    //     { day: 'Sunday', time: '10AM - 08PM' },
+    // ];
 
     return (
         <div className="footer-container">

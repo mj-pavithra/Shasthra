@@ -1,7 +1,6 @@
 import React from "react";
 import '../Styles/RightNav.css';
-
-function RightNav() {
+const RightNav:React.FC = () =>{
     
     function LoadSignIn(){
         window.location.href = '/signin';
