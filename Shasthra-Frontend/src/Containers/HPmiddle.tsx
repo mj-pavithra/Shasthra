@@ -22,7 +22,7 @@ const HPmiddle: React.FC = () => {
             <AboutUs/>
             <ModifiedPhotoReel photos={photos} />
             <YouTubeVideoGrid
-                channelId="UCPcLRv5W5E2DuYISjur-mOg"
+                channelId="UCV1TbG7QfpMVIKKp6ewqT6Q"
                 apiKey="AIzaSyBjc5_ztmiXI3mOaizTceIqUOfWLZUMbRk"
             />
             <Introduction/>
