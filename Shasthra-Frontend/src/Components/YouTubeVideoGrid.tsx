@@ -16,6 +16,7 @@ interface VideoData {
                 url: string;
             };
         };
+        resourceId:{videoId: string;};
     };
 }
 
@@ -96,10 +97,12 @@ const YouTubeVideoGrid: React.FC<YouTubeVideoGridProps> = ({ channelId, apiKey }
     }, [playlists, apiKey]);
 
     // Handle thumbnail click
+
     const handleThumbnailClick = (videoId: string) => {
         console.log(videoId);
         setSelectedVideo(videoId);
     };
+
 
     // Close the video popup
     const handleCloseVideo = () => {

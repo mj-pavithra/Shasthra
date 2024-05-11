@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import ReactPlayer from 'react-player';
 import { FaPlay, FaPause, FaForward, FaBackward, FaExpand, FaCompress } from 'react-icons/fa';
 import '../Styles/VideoPlayerPopup.css';
@@ -10,13 +10,14 @@ interface VideoPlayerPopupProps {
 
 const VideoPlayerPopup: React.FC<VideoPlayerPopupProps> = ({ videoUrl, onClose }) => {
     const [playing, setPlaying] = useState<boolean>(true);
-    const [volume, setVolume] = useState<number>(0.8);
     const [seekTime] = useState<number>(10); // Fixed seek time to 10 seconds
     const [playbackRate, setPlaybackRate] = useState<number>(1.0);
     const [fullScreen, setFullScreen] = useState<boolean>(false);
 
+    const playerRef = useRef<ReactPlayer>(null);
+
     const handleSeek = (forward: boolean) => {
-        const player = ReactPlayer.player;
+        const player = playerRef.current;
         if (!player) return;
 
         const currentTime = player.getCurrentTime();
@@ -28,9 +29,9 @@ const VideoPlayerPopup: React.FC<VideoPlayerPopupProps> = ({ videoUrl, onClose }
         <div className="video-player-popup">
             <div className="video-container">
                 <ReactPlayer
+                    ref={playerRef}
                     url={videoUrl}
                     playing={playing}
-                    volume={volume}
                     playbackRate={playbackRate}
                     width="100%"
                     height={fullScreen ? '100%' : 'auto'}
@@ -39,7 +40,7 @@ const VideoPlayerPopup: React.FC<VideoPlayerPopupProps> = ({ videoUrl, onClose }
                 />
                 <button className="close-button" onClick={onClose}>X</button>
             </div>
-            <div className="controls">
+            {/* <div className="controls">
                 <button onClick={() => setPlaying(!playing)}>{playing ? <FaPause /> : <FaPlay />}</button>
                 <button onClick={() => handleSeek(true)}><FaForward /></button>
                 <button onClick={() => handleSeek(false)}><FaBackward /></button>
@@ -52,7 +53,7 @@ const VideoPlayerPopup: React.FC<VideoPlayerPopupProps> = ({ videoUrl, onClose }
                     <option value="2.0">2.0x</option>
                 </select>
                 <button onClick={() => setFullScreen(!fullScreen)}>{fullScreen ? <FaCompress /> : <FaExpand />}</button>
-            </div>
+            </div> */}
         </div>
     );
 };
