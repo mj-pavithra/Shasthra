@@ -13,8 +13,10 @@
 
 .video-container {
     position: relative;
-    max-width: 800px; /* Adjust the max width as needed */
-    max-height: 450px; /* Adjust the max height as needed */
+    max-width: 1500px;
+    width: 90vw;
+    height: 100%;
+    display: flex;
 }
 
 .react-player {

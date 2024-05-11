@@ -39,7 +39,7 @@ const VideoPlayerPopup: React.FC<VideoPlayerPopupProps> = ({ videoUrl, onClose }
                 />
                 <button className="close-button" onClick={onClose}>X</button>
             </div>
-            <div className="controls">
+            {/* <div className="controls">
                 <button onClick={() => setPlaying(!playing)}>{playing ? <FaPause /> : <FaPlay />}</button>
                 <button onClick={() => handleSeek(true)}><FaForward /></button>
                 <button onClick={() => handleSeek(false)}><FaBackward /></button>
@@ -52,7 +52,7 @@ const VideoPlayerPopup: React.FC<VideoPlayerPopupProps> = ({ videoUrl, onClose }
                     <option value="2.0">2.0x</option>
                 </select>
                 <button onClick={() => setFullScreen(!fullScreen)}>{fullScreen ? <FaCompress /> : <FaExpand />}</button>
-            </div>
+            </div> */}
         </div>
     );
 };

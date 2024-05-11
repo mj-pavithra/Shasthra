@@ -136,7 +136,7 @@ const YouTubeVideoGrid: React.FC<YouTubeVideoGridProps> = ({ channelId, apiKey }
                         ))}
                         <div className="subscribe-button">
                             <a
-                                href="https://www.youtube.com/channel/UC3z0oXNhmY8ab45WTp4nvwQ"
+                                href="https://www.youtube.com/@ayushashasthraka"
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
