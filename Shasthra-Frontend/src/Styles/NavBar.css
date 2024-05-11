@@ -14,7 +14,7 @@
     justify-content: space-between;
     align-items: center;
     height: 96px; /* Set consistent height */
-    width: calc(100% - 5px); /* Calculate width with desired adjustment */
+    width: calc(100% - 15px); /* Calculate width with desired adjustment */
     padding: 0 5px; /* Add padding to account for the width adjustment */
     background-color: white; /* Add a background color as desired */
     z-index: 100; /* Ensure navbar is on top of other elements */

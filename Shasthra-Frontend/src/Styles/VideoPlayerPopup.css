@@ -1,0 +1,63 @@
+.video-player-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.video-container {
+    position: relative;
+    max-width: 800px; /* Adjust the max width as needed */
+    max-height: 450px; /* Adjust the max height as needed */
+}
+
+.react-player {
+    width: 100%;
+    height: 100%;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.controls {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.controls button, .controls select {
+    margin-right: 10px;
+    padding: 8px 12px;
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.controls button:hover, .controls select:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.fullscreen-button {
+    margin-left: auto;
+}
