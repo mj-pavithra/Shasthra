@@ -32,9 +32,9 @@ const VideoPlayerPopup: React.FC<VideoPlayerPopupProps> = ({ videoUrl, onClose }
                     ref={playerRef}
                     url={videoUrl}
                     playing={playing}
-                    playbackRate={playbackRate}
+                    // playbackRate={playbackRate}
                     width="100%"
-                    height={fullScreen ? '100%' : 'auto'}
+                    // height={fullScreen ? '100%' : 'auto'}
                     controls
                     onEnded={() => setPlaying(false)}
                 />
